@@ -20,7 +20,8 @@ class Example(QWidget):
         self.pushButton.clicked.connect(self.paint)
 
     def initUI(self):
-        self.colors = ['Yellow']
+        self.colors = ['Red', 'Orange', 'Yellow', 'Green', 'Cyan',
+                       'Blue', 'Magenta', 'Purple', 'Brown', 'Black']
         self.do_paint = False
 
     def paintEvent(self, event):
