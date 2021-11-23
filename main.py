@@ -7,16 +7,19 @@ from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QPainter, QColor
 from random import choice, randint
 from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QWidget, QPushButton
 from PyQt5 import uic
 
 
 class Example(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
         self.initUI()
         self.setFixedSize(1280, 900)
+        self.pushButton = QPushButton(self)
+        self.pushButton.resize(100, 50)
+        self.pushButton.move(500, 800)
+        self.pushButton.setText('новый круг')
         self.pushButton.clicked.connect(self.paint)
 
     def initUI(self):
